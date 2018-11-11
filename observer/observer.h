@@ -10,15 +10,12 @@ class WeatherData {
 	float temperature;
 	float humidity;
 	float pressure;
-public:
+	
+	public:
 	void registerOberver(Observer* o);
-
 	void removeOberver(Observer* o);
-
 	void notifyOberver();
-
 	void mesurementChanged();
-
 	void setMesuarements(float temp, float hum, float pres);
 };
 
@@ -29,7 +26,6 @@ class CurrentConditionDisplay : public Observer {
 
 	public:
 	CurrentConditionDisplay(WeatherData *weaterData);
-	
 	void update(float temperature, float humidity, float pressure);
 	void display();
 };
